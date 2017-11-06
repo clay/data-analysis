@@ -7,7 +7,7 @@
     "lint": "./node_modules/.bin/eslint --max-warnings 0 bin lib index.js"
   },
   "bin": {
-    "cli": "./bin/cmd.js"
+    "cli": "./bin/cli.js"
   },
   "keywords": [
     "cli",
