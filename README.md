@@ -18,8 +18,8 @@ Commands
 - `npm lint` - runs eslint
 - `./bin/cli.js`
     - `--help`
-    - `nlp`
-
+    - [`nlp`](https://github.com/nymag/clay-data-science#nlp)
+    
 Nlp
 ====
 
