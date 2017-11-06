@@ -1,0 +1,30 @@
+{
+  "name": "clay-data-science",
+  "version": "1.0.0",
+  "description": "Clay data science tools",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --max-warnings 0 bin lib index.js"
+  },
+  "bin": {
+    "cli": "./bin/cmd.js"
+  },
+  "keywords": [
+    "cli",
+    "new york media",
+    "data science",
+    "clay"
+  ],
+  "author": "New York Media",
+  "homepage": "https://github.com/nymag/clay-data-science#readme",
+  "dependencies": {
+    "@google-cloud/bigquery": "^0.10.0",
+    "@google-cloud/language": "^1.0.0",
+    "path": "^0.12.7",
+    "require-glob": "^3.2.0",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0"
+  }
+}
