@@ -7,13 +7,14 @@ const { join, resolve } = require('path'),
 
 // Define our internal and external dependencies and bind them to our commands
 let internals = {},
-  deps = { join, resolve, internals },
+  deps = { join, resolve, process, internals },
   commands;
 
 Object.keys(modNames).forEach(module => {
+
   deps.internals[module] = modNames[module];
 });
 
-commands = Object.keys(cmdNames).map((cmd) => cmdNames[cmd](deps.internals));
+commands = Object.keys(cmdNames).map((cmd) => cmdNames[cmd].cmd(deps.internals));
 
 module.exports = { commands, modules: deps.internals };
