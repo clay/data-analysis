@@ -11,10 +11,9 @@ let internals = {},
   commands;
 
 Object.keys(modNames).forEach(module => {
-
   deps.internals[module] = modNames[module];
 });
 
-commands = Object.keys(cmdNames).map((cmd) => cmdNames[cmd].cmd(deps.internals));
+commands = Object.keys(cmdNames).map((cmd) => cmdNames[cmd](deps.internals));
 
 module.exports = { commands, modules: deps.internals };
