@@ -20,9 +20,11 @@
   "dependencies": {
     "@google-cloud/bigquery": "^0.10.0",
     "@google-cloud/language": "^1.0.0",
+    "bluebird": "^3.5.1",
     "elasticsearch": "^13.3.1",
+    "elasticsearch-scroll": "^1.1.1",
+    "fetch-retry": "^1.1.1",
     "lodash": "^4.17.4",
-    "node-fetch": "^1.7.3",
     "path": "^0.12.7",
     "require-glob": "^3.2.0",
     "yargs": "^10.0.3"
