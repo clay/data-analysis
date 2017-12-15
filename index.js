@@ -2,8 +2,10 @@
 
 const { join, resolve } = require('path'),
   glob = require('require-glob'),
-  modNames = glob.sync(['lib/modules/*.js']),
-  cmdNames = glob.sync(['lib/commands/*.js']);
+  publish = require('./lib/publish'),
+  config = require('./lib/config'),
+  modNames = glob.sync(['./lib/modules/*.js']),
+  cmdNames = glob.sync(['./lib/commands/*.js']);
 
 // Define our internal and external dependencies and bind them to our commands
 let internals = {},
@@ -16,4 +18,9 @@ Object.keys(modNames).forEach(module => {
 
 commands = Object.keys(cmdNames).map((cmd) => cmdNames[cmd](deps.internals));
 
-module.exports = { commands, modules: deps.internals };
+module.exports = {
+  config: config,
+  commands,
+  modules: deps.internals,
+  publish: publish
+};
