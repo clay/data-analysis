@@ -1,7 +1,5 @@
-Clay Data Science CLI
+Clay Data Science
 ========================
-
-A CLI for performing data analysis on Clay data
 
 Installation
 ============
@@ -9,8 +7,14 @@ Installation
 - git clone
 - nvm install v8
 - npm install
-- Create a `keyfile.json` with BigQuery account keys from [Google Cloud Platform](https://console.cloud.google.com/apis/credentials?project=nymag-analaytics-dev).
-- Set an environment variable for the BigQuery project id, e.g. `process.env.BQ_PROJECT_ID`
+- [Authenticate](https://cloud.google.com/docs/authentication/getting-started) to Google's Cloud API from an associated Google Cloud Platform Project and download the keyfile.json.
+- Set the environment variable `GOOGLE_APPLICATION_CREDENTIALS=[PATH]`, replacing [PATH] with the location of the keyfile.json file you downloaded in the previous step.
+- Enable both the [BigQuery API](https://cloud.google.com/bigquery/) and the [Google Natural Language API](https://cloud.google.com/natural-language)  within your created project.
+
+Integration
+============
+
+
 
 Commands
 ========
@@ -19,23 +23,28 @@ Commands
 - `./bin/cli.js`
     - `--help`
     - [`nlp`](https://github.com/nymag/clay-data-science#nlp)
-    
+
+Clay Data Science also contains a handy CLI for importing legacy data to BigQuery via Elasticsearch:    
+
 Nlp
 ====
 
-Parses data based on a specified NLP feature and stores the parsed data into a BigQuery table.
+Parses Elasticsearch data based on a specified NLP feature and stores the parsed data into a BigQuery dataset/table.
 
-`./bin/cli.js nlp --feature sentimentAnalysis --from <dataset>.<table> --to <dataset>.<table> --field paragraphDescription --limit 20`
+`./bin/cli.js nlp --service elasticsearch --from published-articles.general --to clay_sites.content_classification --field content --query /Users/dalia/Desktop/query.json --schema /Users/dalia/Desktop/categories.yml --feature classifyContent`
 
-* `--feature, -fe <feature> : An NLP feature, e.g. sentimentAnalysis, entityAnalysis, contentClassification`
-* `--from, -fr <dataset>.<table> : The BigQuery dataset and table to pull data from to analyze`
-* `--field -f <field> : The BigQuery field to perform the analysis on`
-* `--limit -l <limit> : Specify a limit of rows to get and insert back into BigQuery`
+* `--service, -s <service> : The data source`
+* `--feature, -fe <feature> : An NLP feature, e.g. classifyContent`
+* `--to, -t <index>.<type> : Configuration for pulling data from Elasticsearch'
+`
+* `--from, -fr <dataset>.<table> : The BigQuery dataset and table to insert data into`
 
+* `--field -f <field> : The data to analyze, based on property/field name`
+* `--query -q <query> : The query to POST to Elasticsearch. [Query Examples](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html)`
+* `--schema -sc <schema> : The yml [schema](https://cloud.google.com/bigquery/docs/schemas) to pass to BigQuery`
 
 Coming Soon
 ===========
 
-- Elasticsearch integration
-- Schema.json files for generating datasets/tables 
-- More modules!
+- Tests
+- More NLP features!
