@@ -11,11 +11,36 @@ Installation
 - Set the environment variable `GOOGLE_APPLICATION_CREDENTIALS=[PATH]`, replacing `[PATH]` with the location of the keyfile.json file you downloaded in the previous step.
 - Enable both the [BigQuery API](https://cloud.google.com/bigquery/) and the [Google Natural Language API](https://cloud.google.com/natural-language)  within your created project.
 
-Integration
-============
+Setup & Integration
+===================
 
-Coming soon!
+In your app.js, instantiate Clay Data Science by passing in the parent directory where your tasks (data science features) will live:
 
+```
+clayDataScience.config({
+  projectDir: path.resolve('./parent-directory')
+});
+```
+
+To leverage `save` and `publish` hooks, ensure that Clay Data Science is also passed in as an Amphora Plugin during Amphora instantation:
+
+```
+return amphora(
+  plugins: [clayDataScience]
+})
+```
+
+The parent directory should include a subdirectory called `tasks`, with each task including a handler, a transform, and a data schema. The directory structure should look like this:
+
+```
+- parent-directory
+  - tasks
+    - feature
+      - handler.js
+      - schema.yml
+      - transform.js
+```
+        
 CLI
 ====
 
