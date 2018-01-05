@@ -14,7 +14,12 @@ Installation
 Integration
 ============
 
+Coming soon!
 
+CLI
+====
+
+Clay Data Science also contains a handy CLI for importing legacy data to BigQuery via Elasticsearch. To get started, just set an `ELASTICSEARCH_HOST` environment variable.   
 
 Commands
 ========
@@ -24,13 +29,8 @@ Commands
     - `--help`
     - [`nlp`](https://github.com/nymag/clay-data-science#nlp)
 
-
-CLI
-====
-
-Clay Data Science also contains a handy CLI for importing legacy data to BigQuery via Elasticsearch. To get started, just set an `ELASTICSEARCH_HOST` environment variable.   
-
-* `Nlp`
+NLP
+========
 
 Parses Elasticsearch data based on a specified NLP feature and stores the parsed data into a BigQuery dataset/table.
 
