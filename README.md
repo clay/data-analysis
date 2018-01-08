@@ -71,6 +71,6 @@ Parses Elasticsearch data based on a specified NLP feature and stores the parsed
 
 Coming Soon
 ===========
-
 - Tests
 - More NLP features!
+- More thorough documentation on schemas within tasks
