@@ -61,13 +61,13 @@ Parses Elasticsearch data based on a specified NLP feature and stores the parsed
 
 `./bin/cli.js nlp --service elasticsearch --from published-articles.general --to clay_sites.content_classification --field content --query /path/to/query.json --schema /path/to/schema.yml --feature classifyContent`
 
-* `--service, -s <service> : The data source`
-* `--feature, -fe <feature> : An NLP feature, e.g. classifyContent`
-* `--to, -t <index>.<type> : Configuration for pulling data from Elasticsearch`
-* `--from, -fr <dataset>.<table> : The BigQuery dataset and table to insert data into`
-* `--field -f <field> : The data to analyze, based on property/field name`
-* `--query -q <query> : The file path to a query to POST to Elasticsearch` [Query Examples](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html)
-* `--schema -sc <schema> : The file path to a yml schema to pass to BigQuery` [BigQuery Schemas](https://cloud.google.com/bigquery/docs/schemas)
+* `--service, -s <service>` : The data source
+* `--feature, -fe <feature>` : An NLP feature, e.g. classifyContent
+* `--to, -t <index>.<type>` : Configuration for pulling data from Elasticsearch
+* `--from, -fr <dataset>.<table>` : The BigQuery dataset and table to insert data into
+* `--field -f <field>` : The data to analyze, based on property/field name
+* `--query -q <query>` : The file path to a query to POST to [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html)
+* `--schema -sc <schema>` : The file path to a yml schema to pass to BigQuery [BigQuery Schemas](https://cloud.google.com/bigquery/docs/schemas)
 
 Coming Soon
 ===========
