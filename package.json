@@ -1,6 +1,6 @@
 {
-  "name": "clay-data-science",
-  "version": "1.0.0",
+  "name": "data-analysis",
+  "version": "0.0.1",
   "description": "Clay data science tooling",
   "main": "index.js",
   "scripts": {
@@ -12,11 +12,12 @@
   "keywords": [
     "cli",
     "new york media",
+    "data analysis",
     "data science",
     "clay"
   ],
   "author": "New York Media",
-  "homepage": "https://github.com/nymag/clay-data-science#readme",
+  "homepage": "https://github.com/nymag/data-analysis#readme",
   "dependencies": {
     "@google-cloud/bigquery": "^0.10.0",
     "@google-cloud/language": "^1.0.0",

@@ -1,4 +1,4 @@
-Clay Data Science
+Clay Data Analysis
 ========================
 
 Installation
