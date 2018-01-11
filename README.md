@@ -30,7 +30,7 @@ return amphora(
 })
 ```
 
-The parent directory should include a subdirectory called `tasks`, with each task including a handler, a transform, and a data schema. The directory structure should look like this:
+The parent directory should include a subdirectory called `tasks`, with each task including a [`handler`], a [`transform`], and a [`data schema`]. The directory structure should look like this:
 
 ```
 - parent-directory
@@ -41,6 +41,24 @@ The parent directory should include a subdirectory called `tasks`, with each tas
       - transform.js
 ```
         
+Data Schema
+===========
+
+Coming soon!
+
+
+Transform
+===========
+
+Coming soon!
+
+
+Handler
+===========
+
+Coming soon!
+
+
 CLI
 ====
 

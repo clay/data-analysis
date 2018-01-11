@@ -19,8 +19,8 @@ Object.keys(modNames).forEach(module => {
 commands = Object.keys(cmdNames).map((cmd) => cmdNames[cmd](deps.internals));
 
 module.exports = {
-  config: config,
   commands,
+  config: config,
   modules: deps.internals,
   publish: publish
 };
