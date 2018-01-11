@@ -1,6 +1,6 @@
 {
   "name": "data-analysis",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Clay data science tooling",
   "main": "index.js",
   "scripts": {
@@ -21,13 +21,19 @@
   "dependencies": {
     "@google-cloud/bigquery": "^0.10.0",
     "@google-cloud/language": "^1.0.0",
+    "JSONStream": "^1.3.2",
     "chai": "^4.1.2",
     "elasticsearch": "^13.3.1",
     "elasticsearch-scroll-stream": "^1.1.3",
+    "highland": "^2.11.1",
+    "js-yaml": "^3.10.0",
     "lodash": "^4.17.4",
     "mocha": "^4.1.0",
     "path": "^0.12.7",
+    "request": "^2.83.0",
     "require-glob": "^3.2.0",
+    "striptags": "^3.1.1",
+    "walk-promise": "^0.2.0",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
