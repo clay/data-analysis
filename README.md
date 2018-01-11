@@ -17,7 +17,7 @@ Setup & Integration
 In your app.js, instantiate Clay Data Science by passing in the parent directory where your tasks (data science features) will live:
 
 ```
-clayDataScience.config({
+dataAnalysis.config({
   projectDir: path.resolve('./parent-directory')
 });
 ```
@@ -26,7 +26,7 @@ To leverage `save` and `publish` hooks, ensure that Clay Data Science is also pa
 
 ```
 return amphora(
-  plugins: [clayDataScience]
+  plugins: [dataAnalysis]
 })
 ```
 
@@ -70,7 +70,7 @@ Commands
 - `npm lint` - runs eslint
 - `./bin/cli.js`
     - `--help`
-    - [`nlp`](https://github.com/nymag/clay-data-science#nlp)
+    - [`nlp`](https://github.com/clay/data-analysis#nlp)
 
 NLP
 ========

@@ -17,7 +17,7 @@
     "clay"
   ],
   "author": "New York Media",
-  "homepage": "https://github.com/nymag/data-analysis#readme",
+  "homepage": "https://github.com/clay/data-analysis#readme",
   "dependencies": {
     "@google-cloud/bigquery": "^0.10.0",
     "@google-cloud/language": "^1.0.0",
