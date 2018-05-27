@@ -131,13 +131,13 @@ function get(module, argv) {
         query: {
           bool : {
             filter: {
-              prefix: {canonicalUrl: 'http://nymag.com/selectall'}
+              prefix: {canonicalUrl: 'http://nymag.com/strategist'}
             },
             must: [{
               range: {
                 date: {
-                  gt : "31/10/2017",
-                  lte :  "31/12/2017",
+                  gt: "01/01/2017",
+                  lte: "28/02/2017",
                   format: "dd/MM/yyyy||yyyy"
                 }
               }
@@ -169,7 +169,6 @@ function get(module, argv) {
             entryContentChannel = entry.contentChannel,
             product = _map(entry.content, (function (obj){
             if (obj._ref.indexOf("components/product/") !== -1) {
-              console.log("this is a proudct!!!");
               let data = {
                 contentChannel: entryContentChannel || '',
                 pageUri: entryUri || '',
@@ -183,8 +182,9 @@ function get(module, argv) {
                 salePrice: obj.salePrice || '',
                 canonicalUrl: obj.canonicalUrl || ''
               };
-              return bigQuery.insert(data);
+              //return bigQuery.insert(data);
             } else {
+              console.log("no products here!", entryUri);
             }
             return entry;
           }));
