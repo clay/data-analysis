@@ -1,6 +1,6 @@
 {
   "name": "data-analysis",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Clay data science tooling",
   "main": "index.js",
   "scripts": {
