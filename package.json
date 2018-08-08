@@ -19,8 +19,8 @@
   "author": "New York Media",
   "homepage": "https://github.com/clay/data-analysis#readme",
   "dependencies": {
-    "@google-cloud/bigquery": "^0.10.0",
-    "@google-cloud/language": "^1.0.0",
+    "@google-cloud/bigquery": "^1.3.0",
+    "@google-cloud/language": "^1.2.0",
     "JSONStream": "^1.3.2",
     "chai": "^4.1.2",
     "clay-log": "^1.2.1",
@@ -29,15 +29,15 @@
     "highland": "^2.11.1",
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.4",
-    "mocha": "^4.1.0",
     "path": "^0.12.7",
-    "request": "^2.83.0",
+    "request": "^2.87.0",
     "require-glob": "^3.2.0",
     "striptags": "^3.1.1",
     "walk-promise": "^0.2.0",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
-    "eslint": "^4.10.0"
+    "eslint": "^4.10.0",
+    "mocha": "^5.2.0"
   }
 }
