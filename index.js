@@ -21,5 +21,5 @@ commands = Object.keys(cmdNames).map((cmd) => cmdNames[cmd](deps.internals));
 module.exports = {
   commands,
   config: config,
-  modules: deps.internals,
+  modules: deps.internals
 };
