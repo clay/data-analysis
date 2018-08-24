@@ -22,5 +22,4 @@ module.exports = {
   commands,
   config: config,
   modules: deps.internals,
-  publish: publish
 };
